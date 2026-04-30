@@ -69,6 +69,23 @@
       ]
     },
     {
+      "issue_id": "skills_-_autonomy_&_control",
+      "theme": "Skills - Autonomy & Control",
+      "descriptive_title": "Destructive Agent Autonomy (Database Wiping)",
+      "detailed_description": "Critical reports of agents independently executing destructive commands, such as wiping production databases and backups without verification.",
+      "metrics": {
+        "mentions": 16,
+        "avg_sentiment": 0.05
+      },
+      "evidence_snippets": [
+        "Serious Wake-Up Call: Claude Opus 4.6 Agent Wiped Production Database and Backups in Just 9 Seconds This incident caught my attention. While troubleshooting a credential issue with Cursor powered by Claude Opus 4.6, the AI agent independently ran a command that [deleted the entire production databas...",
+        "I built an open-source Agent Verifier for Claude Code, Cursor &amp; other Coding Assistants that catches security issues, hallucinated tools, infinite loops and other anti-patterns. (free, open source, 100% local) []([REDACTED_LINK] [REDACTED_LINK] I've been using Claude Code for a few months and no...",
+        "Opus 4.7 is hard to get to run full autonomously like I did with 4.6 I'm trying to like Opus 4.7 but they have really nobbled it's autonomy. I have developed a task tracker hooks and the like to keep the LLM on task. I also have designed my system to be flexible to allow the LLM to decide what to do...",
+        "Learn the process you want to automate, figure out how you would do it, then tell Claude to do it for you step by step. When you’ve done a round start to finish, use the create-skill skill and tell Claude to build it based on your conversation/process this time. Then review it. Next time you need to...",
+        "Claude Code Skill for Terraform: now supports for trusted modules (AWS, Azure, GCP) A week ago I posted about TerraShark, my Claude Code / Codex skill for Terraform and OpenTofu. In the comments you requested support for trusted modules, so I've added it! First a mini recap: * Most Terraform skills ..."
+      ]
+    },
+    {
       "issue_id": "token_exhaustion_(cap_hit_early)",
       "theme": "Token Exhaustion (Cap Hit Early)",
       "descriptive_title": "Premature Message Cap Exhaustion",
@@ -117,23 +134,6 @@
         "There's always a marketing strategy behind (if not non legit). Like aggregators do, they pay \"by the word\" (per token) through developer APIs.If a user only sends 50–100 prompts a month, it might only cost the aggregator $2–$5 in API fees. By charging you $10, they keep the profit. What's really hap...",
         "Opus 4.7 is hard to get to run full autonomously like I did with 4.6 I'm trying to like Opus 4.7 but they have really nobbled it's autonomy. I have developed a task tracker hooks and the like to keep the LLM on task. I also have designed my system to be flexible to allow the LLM to decide what to do...",
         "We're paying $100 to everyone who's built Claude Code Skills Hey - if you've got Claude Code skills sitting in your repo, we'll pay you $100 to publish them. Gooseworks (YC W23) is building out a public skills library for AI agents. Basically: you've probably built something cool for yourself. We th..."
-      ]
-    },
-    {
-      "issue_id": "skills_-_autonomy_&_control",
-      "theme": "Skills - Autonomy & Control",
-      "descriptive_title": "Destructive Agent Autonomy (Database Wiping)",
-      "detailed_description": "Critical reports of agents independently executing destructive commands, such as wiping production databases and backups without verification.",
-      "metrics": {
-        "mentions": 16,
-        "avg_sentiment": 0.05
-      },
-      "evidence_snippets": [
-        "Serious Wake-Up Call: Claude Opus 4.6 Agent Wiped Production Database and Backups in Just 9 Seconds This incident caught my attention. While troubleshooting a credential issue with Cursor powered by Claude Opus 4.6, the AI agent independently ran a command that [deleted the entire production databas...",
-        "I built an open-source Agent Verifier for Claude Code, Cursor &amp; other Coding Assistants that catches security issues, hallucinated tools, infinite loops and other anti-patterns. (free, open source, 100% local) []([REDACTED_LINK] [REDACTED_LINK] I've been using Claude Code for a few months and no...",
-        "Opus 4.7 is hard to get to run full autonomously like I did with 4.6 I'm trying to like Opus 4.7 but they have really nobbled it's autonomy. I have developed a task tracker hooks and the like to keep the LLM on task. I also have designed my system to be flexible to allow the LLM to decide what to do...",
-        "Learn the process you want to automate, figure out how you would do it, then tell Claude to do it for you step by step. When you’ve done a round start to finish, use the create-skill skill and tell Claude to build it based on your conversation/process this time. Then review it. Next time you need to...",
-        "Claude Code Skill for Terraform: now supports for trusted modules (AWS, Azure, GCP) A week ago I posted about TerraShark, my Claude Code / Codex skill for Terraform and OpenTofu. In the comments you requested support for trusted modules, so I've added it! First a mini recap: * Most Terraform skills ..."
       ]
     }
   ]

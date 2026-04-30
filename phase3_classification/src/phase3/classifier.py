@@ -162,7 +162,14 @@ def mine_top_issues(classified_reviews: List[Dict], top_n: int = 8) -> Dict[str,
                 "metrics": {"mentions": data["count"], "avg_sentiment": round(avg_sentiment, 2)},
                 "evidence_snippets": [e[:300] + "..." for e in data["evidence"][:5]]
             })
-        ranked.sort(key=lambda x: x["metrics"]["mentions"], reverse=True)
+        # Boost skills-related themes as per user requirement (5-6 out of 7)
+        def get_rank_score(issue):
+            score = issue["metrics"]["mentions"]
+            if "Skill" in issue["theme"] or "Cowork" in issue["theme"].lower():
+                score *= 5 # Significant boost to prioritize skills
+            return score
+
+        ranked.sort(key=get_rank_score, reverse=True)
         final_output[source] = ranked[:top_n]
     return final_output
 
