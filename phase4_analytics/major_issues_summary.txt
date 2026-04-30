@@ -8,10 +8,10 @@ ISSUE: Functional Gaps in Community Claude Skills
   Category:    General Skill Issue
   Explanation: Multiple reports highlighting that many community-contributed skills are broken, undocumented, or redundant.
   Metrics:
-    - Mentions (30d):   100
+    - Mentions (30d):   106
     - 7-Day Trend:      100.0%
     - Sentiment Score:  0.03 (-1.0 to 1.0)
-    - Distribution:     {'positive': 4, 'neutral': 96, 'negative': 0}
+    - Distribution:     {'positive': 3, 'neutral': 103, 'negative': 0}
   Key Evidence:
     > "Created a CLI so Claude can access 100+ skills and data APIs for Growth / GTM..."
     > "I made a Claude Code/Agent skill for making beautiful upload ready App Store Screenshots for your app Would love your feedback! Making screenshots was alsways something I dread to do in Figma. Finally, gpt image 2 is able to make amazing ones very consistently!..."
@@ -20,68 +20,52 @@ ISSUE: Functional Gaps in Community Claude Skills
     > "Seems interesting, did you use a summary from Blinklist or sumilar to create the skill?..."
 
 
+ISSUE: Context Loss & Inconsistent Business Analysis
+  Category:    Skills - Non-Technical Friction
+  Explanation: Non-technical users reporting frequent context loss, repetitive prompting requirements, and generic/hallucinated results for business writing and reporting tasks.
+  Metrics:
+    - Mentions (30d):   75
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.02 (-1.0 to 1.0)
+    - Distribution:     {'positive': 5, 'neutral': 68, 'negative': 2}
+  Key Evidence:
+    > "This is super useful. The "turn anything into a citable wiki page" workflow is exactly what I want for research rabbit holes. How are you handling citation fidelity for YouTube (timestamps, transcript chunks, etc) and for web pages that change over time? Also, does the lint step catch broken wikilin..."
+    > "I built an open-source Agent Verifier for Claude Code, Cursor &amp; other Coding Assistants that catches security issues, hallucinated tools, infinite loops and other anti-patterns. (free, open source, 100% local) []([REDACTED_LINK] [REDACTED_LINK] I've been using Claude Code for a few months and no..."
+    > "I built a personal wiki that my coding agent maintains — anyone want to try it out? So I've been using Claude Code a lot lately, and I kept running into the same problem: every time I asked it something about a domain I care about, it would either answer from training data (sometimes wrong) or I'd h..."
+    > "Would it be difficult to adapt this to other topics for someone who hasn’t used Code yet? It’s me, I haven’t used code. I’m only just discovering how much Cowork can achieve, but I’m constantly reiterating context that should be memory by now...."
+    > "Code rabbit reviews runs on cloud, it uses your whole repo context and reviews your Pr against different categories of findings, possible bugs, regressions, code best practices and a lot more. I don’t have the complete list. I used their trial , not a current user. But based on what I experienced th..."
+
+
 ISSUE: Infinite Loops during File Operations
   Category:    Skills - Reliability & Bugs
   Explanation: Agents getting stuck in repetitive loops, particularly when writing large files or encountering character limit boundaries.
   Metrics:
-    - Mentions (30d):   49
+    - Mentions (30d):   52
     - 7-Day Trend:      100.0%
     - Sentiment Score:  0.01 (-1.0 to 1.0)
-    - Distribution:     {'positive': 6, 'neutral': 40, 'negative': 3}
+    - Distribution:     {'positive': 8, 'neutral': 40, 'negative': 4}
   Key Evidence:
+    > "Building an Auto-Restart Mechanism for Claude Code Claude Code requires a manual session restart every time you install an MCP server or change a config, which breaks your momentum. I built claude-resurrect to fix this. It uses a custom skill and a shell wrapper to let Claude save its state to a man..."
     > "This is a nice take on reducing the friction at the ingestion step, which is honestly where most people drop off. Turning any URL into clean, linked, citable wiki pages is exactly what makes the whole workflow usable day to day. the linting and structure part is especially important or it falls apar..."
     > "This is super useful. The "turn anything into a citable wiki page" workflow is exactly what I want for research rabbit holes. How are you handling citation fidelity for YouTube (timestamps, transcript chunks, etc) and for web pages that change over time? Also, does the lint step catch broken wikilin..."
     > "I built an open-source Agent Verifier for Claude Code, Cursor &amp; other Coding Assistants that catches security issues, hallucinated tools, infinite loops and other anti-patterns. (free, open source, 100% local) []([REDACTED_LINK] [REDACTED_LINK] I've been using Claude Code for a few months and no..."
     > "I built a personal wiki that my coding agent maintains — anyone want to try it out? So I've been using Claude Code a lot lately, and I kept running into the same problem: every time I asked it something about a domain I care about, it would either answer from training data (sometimes wrong) or I'd h..."
-    > "This is exactly where the pattern shines. once the agent writes things down and checks the wiki first, the whole experience becomes way more consistent. The proactive lookup is a nice touch too, that removes a lot of friction. Main challenge will be keeping the wiki clean as it grows, especially aro..."
 
 
 ISSUE: High Friction and Janky Data Ingestion
   Category:    Skills - Complexity & UX
   Explanation: Functional gaps in turning URLs into clean data, broken links, and high complexity for setting up basic MCP skills.
   Metrics:
-    - Mentions (30d):   45
+    - Mentions (30d):   44
     - 7-Day Trend:      100.0%
     - Sentiment Score:  0.05 (-1.0 to 1.0)
-    - Distribution:     {'positive': 6, 'neutral': 36, 'negative': 3}
+    - Distribution:     {'positive': 6, 'neutral': 35, 'negative': 3}
   Key Evidence:
     > "I built an open-source Agent Verifier for Claude Code, Cursor &amp; other Coding Assistants that catches security issues, hallucinated tools, infinite loops and other anti-patterns. (free, open source, 100% local) []([REDACTED_LINK] [REDACTED_LINK] I've been using Claude Code for a few months and no..."
     > "I built a personal wiki that my coding agent maintains — anyone want to try it out? So I've been using Claude Code a lot lately, and I kept running into the same problem: every time I asked it something about a domain I care about, it would either answer from training data (sometimes wrong) or I'd h..."
     > "Would it be difficult to adapt this to other topics for someone who hasn’t used Code yet? It’s me, I haven’t used code. I’m only just discovering how much Cowork can achieve, but I’m constantly reiterating context that should be memory by now...."
     > "How different is Claude-style PR review skill.md from CodeRabbit? I’m thinking of building my own Claude-style PR review skill.md. While digging around, I came across CodeRabbit, which a lot of people seem to already use for PR reviews. Now I’m a bit confused about what the real difference is. From ..."
     > "Learn how to write better prompts with Sensei! I built an open-source skill called Prompt Sensei: [REDACTED_LINK] We all know it by now. Prompting is key to unlock AI potentials. But learning how to write better prompts is not easy. Most people just learn by trial-and-error., including me. So I buil..."
-
-
-ISSUE: Premature Message Cap Exhaustion
-  Category:    Token Exhaustion (Cap Hit Early)
-  Explanation: Users hitting daily message limits unexpectedly early due to inefficient model 'over-planning' and redundant turns.
-  Metrics:
-    - Mentions (30d):   35
-    - 7-Day Trend:      100.0%
-    - Sentiment Score:  0.04 (-1.0 to 1.0)
-    - Distribution:     {'positive': 3, 'neutral': 32, 'negative': 0}
-  Key Evidence:
-    > "Opensourcing an internal skill to make Claude Code think like a CTO-level system designer Yes, after using this for over weeks, we are finally fully open sourcing our sota claude skill to just build multi-step, complex artefacts. First, here's some proof of work - 1. Production Landing page built wi..."
-    > "your breakdown of the LLM's self-preservation and CYA tactics is genuinely insightful im curious if you think this underlying pattern will evolve in future models or if it's a fundamental limitation of the current architecture?..."
-    > "I turned 14 business books into Claude Code skills that auto-trigger based on your question why this exists been using claude for almost all my business planning - pricing, customer interviews, marketing strategy, sales calls. the problem is claude knows these books from training data but only surfa..."
-    > "Skill to use ANY CLI agent inside Claude Code Hello! I made a plugin for myself, &amp; I figured I'd share it, in case someone else finds it useful (also to solicit feedback on it). :) In a nutshell: OpenAI's official codex plugin is awesome, so I took their design, and applied it to every other CLI..."
-    > "I built an open-source Claude Code skill that turns competitor 1-star reviews into a feature roadmap mapped to my own codebase A few weeks ago I caught myself doing the same chore for the third time: opening 8 tabs (G2, Capterra, Reddit, GitHub Issues...), copy-pasting “what do you dislike?” into No..."
-
-
-ISSUE: Extreme Billing due to Massive Context Prefills
-  Category:    Token Cost & Value
-  Explanation: Users reporting sessions costing $40+ because the model burns through 12M+ tokens for simple fixes.
-  Metrics:
-    - Mentions (30d):   31
-    - 7-Day Trend:      100.0%
-    - Sentiment Score:  0.01 (-1.0 to 1.0)
-    - Distribution:     {'positive': 1, 'neutral': 29, 'negative': 1}
-  Key Evidence:
-    > "Opensourcing an internal skill to make Claude Code think like a CTO-level system designer Yes, after using this for over weeks, we are finally fully open sourcing our sota claude skill to just build multi-step, complex artefacts. First, here's some proof of work - 1. Production Landing page built wi..."
-    > "how does a Claude account for 5$ same as a the pro plan 20$ anyone can explain bought claude pro for $5 off some sketchy website and tested it for a full week of coding... it’s literally just claude pro anyone else doing the cheap subscription thing and how this actually work same features buy extre..."
-    > "There's always a marketing strategy behind (if not non legit). Like aggregators do, they pay "by the word" (per token) through developer APIs.If a user only sends 50–100 prompts a month, it might only cost the aggregator $2–$5 in API fees. By charging you $10, they keep the profit. What's really hap..."
-    > "Opus 4.7 is hard to get to run full autonomously like I did with 4.6 I'm trying to like Opus 4.7 but they have really nobbled it's autonomy. I have developed a task tracker hooks and the like to keep the LLM on task. I also have designed my system to be flexible to allow the LLM to decide what to do..."
-    > "We're paying $100 to everyone who's built Claude Code Skills Hey - if you've got Claude Code skills sitting in your repo, we'll pay you $100 to publish them. Gooseworks (YC W23) is building out a public skills library for AI agents. Basically: you've probably built something cool for yourself. We th..."
 
 
 ISSUE: Destructive Agent Autonomy (Database Wiping)
@@ -100,18 +84,262 @@ ISSUE: Destructive Agent Autonomy (Database Wiping)
     > "Claude Code Skill for Terraform: now supports for trusted modules (AWS, Azure, GCP) A week ago I posted about TerraShark, my Claude Code / Codex skill for Terraform and OpenTofu. In the comments you requested support for trusted modules, so I've added it! First a mini recap: * Most Terraform skills ..."
 
 
-ISSUE: Unfavorable Comparisons to ChatGPT and Gemini
-  Category:    Competitor Comparison (Negative)
-  Explanation: Users switching to competitors due to better price-to-performance, faster speeds, or superior feature stability in ChatGPT/Gemini.
+ISSUE: Premature Message Cap Exhaustion
+  Category:    Token Exhaustion (Cap Hit Early)
+  Explanation: Users hitting daily message limits unexpectedly early due to inefficient model 'over-planning' and redundant turns.
   Metrics:
-    - Mentions (30d):   9
+    - Mentions (30d):   36
     - 7-Day Trend:      100.0%
-    - Sentiment Score:  0.1 (-1.0 to 1.0)
-    - Distribution:     {'positive': 1, 'neutral': 8, 'negative': 0}
+    - Sentiment Score:  0.04 (-1.0 to 1.0)
+    - Distribution:     {'positive': 3, 'neutral': 33, 'negative': 0}
   Key Evidence:
-    > "I used Claude to build "pin-llm-wiki" — A skill that turns any URL into a clean, citable Karpathy-style LLM Wiki Hey r/claudeskills 👋 I’ve been using Claude Code a lot for personal research and knowledge management, and one thing kept bothering me: Turning articles, YouTube videos, and GitHub repos ..."
+    > "Opensourcing an internal skill to make Claude Code think like a CTO-level system designer Yes, after using this for over weeks, we are finally fully open sourcing our sota claude skill to just build multi-step, complex artefacts. First, here's some proof of work - 1. Production Landing page built wi..."
+    > "I turned 14 business books into Claude Code skills that auto-trigger based on your question why this exists been using claude for almost all my business planning - pricing, customer interviews, marketing strategy, sales calls. the problem is claude knows these books from training data but only surfa..."
     > "Skill to use ANY CLI agent inside Claude Code Hello! I made a plugin for myself, &amp; I figured I'd share it, in case someone else finds it useful (also to solicit feedback on it). :) In a nutshell: OpenAI's official codex plugin is awesome, so I took their design, and applied it to every other CLI..."
-    > "Sync your AI Agent skills across Gemini, Claude, and Copilot with one command: jup Tired of manually copying your system prompts and custom tools between different AI assistants? I built `jup`, a lightweight Python CLI that manages your "Agent Skills" and keeps them perfectly synced across all your ..."
-    > "Created a repo with skills, hooks and slash commands to use in claude to super charge Claude Code I built something to make Claude Code actually feel like a real engineer with skills, hooks and slash commands. It’s called claude-spellbook. [REDACTED_LINK] The idea is simple: instead of treating AI l..."
-    > "Can you use Cowork to build full SaaS products without coding knowledge? I see Claude users with pretty complex setups and I’m coming at this purely from a vibe-coding perspective, no dev background. I follow the subreddits, watch YouTube courses, and I’ve gotten solid at prompting. I can break down..."
+    > "I built an open-source Claude Code skill that turns competitor 1-star reviews into a feature roadmap mapped to my own codebase A few weeks ago I caught myself doing the same chore for the third time: opening 8 tabs (G2, Capterra, Reddit, GitHub Issues...), copy-pasting “what do you dislike?” into No..."
+    > "A hands-on tutorial for using Claude as a Product Manager (open-source, free, 11 modules) I put together a free, open-source GitHub tutorial that walks you through using Claude Code as a working PM tool - not just for generating text, but for building actual workflows you’d use on the job. It’s call..."
+
+
+ISSUE: Extreme Billing due to Massive Context Prefills
+  Category:    Token Cost & Value
+  Explanation: Users reporting sessions costing $40+ because the model burns through 12M+ tokens for simple fixes.
+  Metrics:
+    - Mentions (30d):   30
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.02 (-1.0 to 1.0)
+    - Distribution:     {'positive': 2, 'neutral': 27, 'negative': 1}
+  Key Evidence:
+    > "Opensourcing an internal skill to make Claude Code think like a CTO-level system designer Yes, after using this for over weeks, we are finally fully open sourcing our sota claude skill to just build multi-step, complex artefacts. First, here's some proof of work - 1. Production Landing page built wi..."
+    > "how does a Claude account for 5$ same as a the pro plan 20$ anyone can explain bought claude pro for $5 off some sketchy website and tested it for a full week of coding... it’s literally just claude pro anyone else doing the cheap subscription thing and how this actually work same features buy extre..."
+    > "There's always a marketing strategy behind (if not non legit). Like aggregators do, they pay "by the word" (per token) through developer APIs.If a user only sends 50–100 prompts a month, it might only cost the aggregator $2–$5 in API fees. By charging you $10, they keep the profit. What's really hap..."
+    > "Opus 4.7 is hard to get to run full autonomously like I did with 4.6 I'm trying to like Opus 4.7 but they have really nobbled it's autonomy. I have developed a task tracker hooks and the like to keep the LLM on task. I also have designed my system to be flexible to allow the LLM to decide what to do..."
+    > "We're paying $100 to everyone who's built Claude Code Skills Hey - if you've got Claude Code skills sitting in your repo, we'll pay you $100 to publish them. Gooseworks (YC W23) is building out a public skills library for AI agents. Basically: you've probably built something cool for yourself. We th..."
+
+SOURCE: r/ClaudeAI
+--------------------------------------------------
+
+ISSUE: Context Loss & Inconsistent Business Analysis
+  Category:    Skills - Non-Technical Friction
+  Explanation: Non-technical users reporting frequent context loss, repetitive prompting requirements, and generic/hallucinated results for business writing and reporting tasks.
+  Metrics:
+    - Mentions (30d):   188
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.03 (-1.0 to 1.0)
+    - Distribution:     {'positive': 9, 'neutral': 174, 'negative': 5}
+  Key Evidence:
+    > "Cowork on Windows 11 as non-admin user. Has anyone been able to get Cowork running as a non-admin user in Windows 11? Things we've tried: 1. Making the user an admin, installing claude desktop, then removing from local admin group. Cowork initially works but stops working immediately following remov..."
+    > "Built an MCP Claude Connector for SEC filings after I nuked through my Claude usage limit I blew through my weekly Claude limit so many times I almost upgraded to the next tier. I knew the problem was because I was dumping the entire 10-Ks in there for context. My lazy ass could have just copied the..."
+    > "Automating my business questions I'm new to Claude. but I want to fully automate my event service business so it can create a portal that keeps track of bookings, automatically sends estimates &amp; contracts to inquiries, keeps track of our calendar and customers; etc. and just all the back and for..."
+    > "anyone else trying to pipe their own data into claude via mcp? I'm trying to build a reliable local RAG setup for claude and it is just exhausting. I want claude to have access to my github repos and past project docs without me copy-pasting everything into the window every morning. I gave up on bui..."
+    > "Como posso usar IA para melhorar meu fluxo de trabalho como dev com ferramentas proprietárias? Oi pessoal! Trabalho como desenvolvedor CLT em uma empresa que usa um ecossistema bem específico e queria entender como vocês usariam IA nesse contexto. # Como funciona meu fluxo hoje O desenvolvimento aqu..."
+
+
+ISSUE: Infinite Loops during File Operations
+  Category:    Skills - Reliability & Bugs
+  Explanation: Agents getting stuck in repetitive loops, particularly when writing large files or encountering character limit boundaries.
+  Metrics:
+    - Mentions (30d):   130
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  -0.01 (-1.0 to 1.0)
+    - Distribution:     {'positive': 6, 'neutral': 116, 'negative': 8}
+  Key Evidence:
+    > "How to prompt for font detection? I'm trying to use claude to find different fonts from images of pages from a book but it seems to be getting a lot of it wrong. Is there a specific setup or model that is best geared for analyzing text from images?..."
+    > "Cowork on Windows 11 as non-admin user. Has anyone been able to get Cowork running as a non-admin user in Windows 11? Things we've tried: 1. Making the user an admin, installing claude desktop, then removing from local admin group. Cowork initially works but stops working immediately following remov..."
+    > "how to do?? bruh I've around 150$ in my aws bedrock account and I've configured all the anthropic models like i just wanted to use those credits in the claude code and build some projects for my end sem.. The first time I tried it was just the bedrock api key that I took and I configured it with cla..."
+    > "Did something change regarding execution? My claude has become unable to launch files or execute commands in my main environment. I might be having an episode but I swear it was capable of doing this like, yesterday. I would tell it to restart servers and things of that nature all the time, with no ..."
+    > "Built a better way to code with Claude Felt like a lot of coding/developer tools lack consistency so built my own UI to help share features and automation across different providers. \- multi-pane UIs \- supports cursor, Claude (and soon codex) etc \- has inbuilt text editor \- automations via web h..."
+
+
+ISSUE: High Friction and Janky Data Ingestion
+  Category:    Skills - Complexity & UX
+  Explanation: Functional gaps in turning URLs into clean data, broken links, and high complexity for setting up basic MCP skills.
+  Metrics:
+    - Mentions (30d):   72
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.05 (-1.0 to 1.0)
+    - Distribution:     {'positive': 4, 'neutral': 65, 'negative': 3}
+  Key Evidence:
+    > "How to prompt for font detection? I'm trying to use claude to find different fonts from images of pages from a book but it seems to be getting a lot of it wrong. Is there a specific setup or model that is best geared for analyzing text from images?..."
+    > "How would you feel about "Claude Go"? I have recently subscribed to Claude Pro because: 1. I wanted to give Opus and Code a try and 2. Because I kept hitting the free limit with my general use I am generally very happy with Claude, from my experience it makes far fewer mistakes than GPT or Mistral a..."
+    > "anyone else trying to pipe their own data into claude via mcp? I'm trying to build a reliable local RAG setup for claude and it is just exhausting. I want claude to have access to my github repos and past project docs without me copy-pasting everything into the window every morning. I gave up on bui..."
+    > "Como posso usar IA para melhorar meu fluxo de trabalho como dev com ferramentas proprietárias? Oi pessoal! Trabalho como desenvolvedor CLT em uma empresa que usa um ecossistema bem específico e queria entender como vocês usariam IA nesse contexto. # Como funciona meu fluxo hoje O desenvolvimento aqu..."
+    > "You're not doing anything weird, that's pretty normal when the task is broad. Claude usually gets better when the prompt has a hard definition of done plus one artifact at a time, then a final pass for consistency. I also ask it to list assumptions first, which cuts rework a lot...."
+
+
+ISSUE: Destructive Agent Autonomy (Database Wiping)
+  Category:    Skills - Autonomy & Control
+  Explanation: Critical reports of agents independently executing destructive commands, such as wiping production databases and backups without verification.
+  Metrics:
+    - Mentions (30d):   40
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.04 (-1.0 to 1.0)
+    - Distribution:     {'positive': 3, 'neutral': 36, 'negative': 1}
+  Key Evidence:
+    > "Built an MCP Claude Connector for SEC filings after I nuked through my Claude usage limit I blew through my weekly Claude limit so many times I almost upgraded to the next tier. I knew the problem was because I was dumping the entire 10-Ks in there for context. My lazy ass could have just copied the..."
+    > "anyone else trying to pipe their own data into claude via mcp? I'm trying to build a reliable local RAG setup for claude and it is just exhausting. I want claude to have access to my github repos and past project docs without me copy-pasting everything into the window every morning. I gave up on bui..."
+    > "**TL;DR of the discussion generated automatically after 50 comments.** **The consensus is a resounding and slightly concerning "same."** It seems nobody is actually reading the code changes before accepting. The prevailing sentiment is that **Claude is the new senior dev, and you're all just treatin..."
+    > "--dangerously-skip-permissions Curse me later..."
+    > "#DANGEROUSLY SKIP PERMISSIONS IS MY MIDDLE NAME..."
+
+
+ISSUE: Functional Gaps in Community Claude Skills
+  Category:    General Skill Issue
+  Explanation: Multiple reports highlighting that many community-contributed skills are broken, undocumented, or redundant.
+  Metrics:
+    - Mentions (30d):   21
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.02 (-1.0 to 1.0)
+    - Distribution:     {'positive': 0, 'neutral': 21, 'negative': 0}
+  Key Evidence:
+    > "Just wondering I recently started a new position in a new working place, and while Ai usage is not brand new to me, I need some clarifications. The organization I am working for is at the very beginning of transitioning towards a heavy Ai usage in all code matters. I am a part of a small developers ..."
+    > "Best claude skills or system Best claude skills for study Hello everyone. Im in yr 11 in western Australia atar. So what are the best claude skills for like studying for all subjects like English, math, science. Ive used claude to make study guides. Exam study guides but I want to do more and optimi..."
+    > "me when i write in all my skills "Make sure to pause and get user validation before continuing" and I just press accept anyway..."
+    > "Anyone built 'chief of staff' skills or subagents in Claude? Working with a small startup incubator whose team just got on a Claude subscription. The CEO is envisioning some "dashboard" functionality, but I think I can build her some skills/workflows, show her how to use them, and she'd get the same..."
+    > "so i built the first one. it’s a founder-digest skill that reviews emails from founders and prioritizes tasks for her throughout the day/week that are highest priority. these could be things like fundraising meetings, etc. [REDACTED_LINK]..."
+
+
+ISSUE: Premature Message Cap Exhaustion
+  Category:    Token Exhaustion (Cap Hit Early)
+  Explanation: Users hitting daily message limits unexpectedly early due to inefficient model 'over-planning' and redundant turns.
+  Metrics:
+    - Mentions (30d):   75
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.02 (-1.0 to 1.0)
+    - Distribution:     {'positive': 5, 'neutral': 68, 'negative': 2}
+  Key Evidence:
+    > "How would you feel about "Claude Go"? I have recently subscribed to Claude Pro because: 1. I wanted to give Opus and Code a try and 2. Because I kept hitting the free limit with my general use I am generally very happy with Claude, from my experience it makes far fewer mistakes than GPT or Mistral a..."
+    > "Built an MCP Claude Connector for SEC filings after I nuked through my Claude usage limit I blew through my weekly Claude limit so many times I almost upgraded to the next tier. I knew the problem was because I was dumping the entire 10-Ks in there for context. My lazy ass could have just copied the..."
+    > "1. Why does it act like this? LLMs work with probabilities, not like a machine that does the same thing every time. They don't "think" about a document the way a person would; they just guess the next words based on what they've learned. When you give it a complicated request, the model's "attention..."
+    > "Did something change regarding execution? My claude has become unable to launch files or execute commands in my main environment. I might be having an episode but I swear it was capable of doing this like, yesterday. I would tell it to restart servers and things of that nature all the time, with no ..."
+    > "It works, but sleep reminders that are inc nowadays, along with mishaps and usage limits is what people complain abt. Mishals can be prevented if you've custom checks to prevent certain commands by hooks. Context itself can be saved by providing only relevant and detailed info...."
+
+
+ISSUE: Extreme Billing due to Massive Context Prefills
+  Category:    Token Cost & Value
+  Explanation: Users reporting sessions costing $40+ because the model burns through 12M+ tokens for simple fixes.
+  Metrics:
+    - Mentions (30d):   50
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  -0.0 (-1.0 to 1.0)
+    - Distribution:     {'positive': 3, 'neutral': 45, 'negative': 2}
+  Key Evidence:
+    > "Built an MCP Claude Connector for SEC filings after I nuked through my Claude usage limit I blew through my weekly Claude limit so many times I almost upgraded to the next tier. I knew the problem was because I was dumping the entire 10-Ks in there for context. My lazy ass could have just copied the..."
+    > "Why Claude needs many tries to get something done right (correct)? Every time I ask Claude to check a document or plan or strategize or update one document based on the other document, it gives just an ok-ok result first time (not 100% correct). Then I ask it to recheck because of issues and missing..."
+    > "1. Why does it act like this? LLMs work with probabilities, not like a machine that does the same thing every time. They don't "think" about a document the way a person would; they just guess the next words based on what they've learned. When you give it a complicated request, the model's "attention..."
+    > "how to do?? bruh I've around 150$ in my aws bedrock account and I've configured all the anthropic models like i just wanted to use those credits in the claude code and build some projects for my end sem.. The first time I tried it was just the bedrock api key that I took and I configured it with cla..."
+    > "Did something change regarding execution? My claude has become unable to launch files or execute commands in my main environment. I might be having an episode but I swear it was capable of doing this like, yesterday. I would tell it to restart servers and things of that nature all the time, with no ..."
+
+SOURCE: r/claude
+--------------------------------------------------
+
+ISSUE: Context Loss & Inconsistent Business Analysis
+  Category:    Skills - Non-Technical Friction
+  Explanation: Non-technical users reporting frequent context loss, repetitive prompting requirements, and generic/hallucinated results for business writing and reporting tasks.
+  Metrics:
+    - Mentions (30d):   146
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.04 (-1.0 to 1.0)
+    - Distribution:     {'positive': 11, 'neutral': 130, 'negative': 5}
+  Key Evidence:
+    > "New to Claude but WTF Am I doing something wrong? I’ve been using Claude Cowork for about a month. At first it was amazing, syncing calendars, uploading docs to Google Drive, creating helpful biz docs etc Today I asked it to adjust one document and save it to my Google Drive and I hit my limit for t..."
+    > "Not sure about co work since I don't use it, but if its got the same chat based thing as base claude and claude code then make sure you're not just using one single chat all the time. Because its context that you keep sending to the model and paying for in your usage limit. Yes usage has been crazy ..."
+    > "Kick back - chargeback I see a lot of posts from people complaining about being cut off, hitting limits without reason and Anthropic not addressing these issues. Unfortunately, you already lost the fight, now you can try to minimize your losses and hit it where it hurts - chargeback. It's your right..."
+    > "How to Actually Use AI Effectively ### A curated mini guide for people who want results, not frustration --- &gt; **Quick mention:** If you're too lazy to read this, copy it to your AI and just ask it to summarise, ironically enough. &gt; **Preface:** This isn't a Claude-specific guide, BUT it can b..."
+    > "Most people treat the AI like a search engine when it should be treated like a junior pair programmer needing explicit context and roles...."
+
+
+ISSUE: Infinite Loops during File Operations
+  Category:    Skills - Reliability & Bugs
+  Explanation: Agents getting stuck in repetitive loops, particularly when writing large files or encountering character limit boundaries.
+  Metrics:
+    - Mentions (30d):   97
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  -0.01 (-1.0 to 1.0)
+    - Distribution:     {'positive': 7, 'neutral': 83, 'negative': 7}
+  Key Evidence:
+    > "New to Claude but WTF Am I doing something wrong? I’ve been using Claude Cowork for about a month. At first it was amazing, syncing calendars, uploading docs to Google Drive, creating helpful biz docs etc Today I asked it to adjust one document and save it to my Google Drive and I hit my limit for t..."
+    > "Did you upgrade just now? Happened to me too when I upgrades, it's a bug in the (windows) app. I was able to use claude on mobile app without any issues..."
+    > "How to Actually Use AI Effectively ### A curated mini guide for people who want results, not frustration --- &gt; **Quick mention:** If you're too lazy to read this, copy it to your AI and just ask it to summarise, ironically enough. &gt; **Preface:** This isn't a Claude-specific guide, BUT it can b..."
+    > "Hey OP i got a SOUL.md file for you! [REDACTED_LINK] --- Assistant Name: ______ AI Perspective: Everything is a system of patterns that relates to something else. the gap in-between the relationships is where the meaning lives. User's Name: ______ User's Perspective: ______ Shared Perspective: _____..."
+    > "Did they make Opus 4.7 even dumber today? It seems to just say shit that makes zero sense today. Total logical falacies. I asked it to do a very simple reveiw of a research plan. And it gave e back such looping logic, like "question 15c asks x, becouse the goal is to ask x, which is why 15c asks x"...."
+
+
+ISSUE: High Friction and Janky Data Ingestion
+  Category:    Skills - Complexity & UX
+  Explanation: Functional gaps in turning URLs into clean data, broken links, and high complexity for setting up basic MCP skills.
+  Metrics:
+    - Mentions (30d):   60
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.05 (-1.0 to 1.0)
+    - Distribution:     {'positive': 6, 'neutral': 51, 'negative': 3}
+  Key Evidence:
+    > "How to Actually Use AI Effectively ### A curated mini guide for people who want results, not frustration --- &gt; **Quick mention:** If you're too lazy to read this, copy it to your AI and just ask it to summarise, ironically enough. &gt; **Preface:** This isn't a Claude-specific guide, BUT it can b..."
+    > "Hey OP i got a SOUL.md file for you! [REDACTED_LINK] --- Assistant Name: ______ AI Perspective: Everything is a system of patterns that relates to something else. the gap in-between the relationships is where the meaning lives. User's Name: ______ User's Perspective: ______ Shared Perspective: _____..."
+    > "Diminishing returns. I feel like this is written into the AI. You start off a new project with a clear path and setup rules to keep the AI focused. The project grows and you start seeing the potential for a finished product but every new iteration the AI recommends scope creep. Now with 4.7 I sit an..."
+    > "LLMs dont have simple settings to "make dumber" or "let it work okay now". they're really complicated systems where the code you can write and control only can help guide the weights in the network and maybe get the desired outcome. what's more likely is antropic want it to be the best it can be so ..."
+    > "it would actually be difficult to come up with a prompt more vague than that lmao..."
+
+
+ISSUE: Destructive Agent Autonomy (Database Wiping)
+  Category:    Skills - Autonomy & Control
+  Explanation: Critical reports of agents independently executing destructive commands, such as wiping production databases and backups without verification.
+  Metrics:
+    - Mentions (30d):   25
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.01 (-1.0 to 1.0)
+    - Distribution:     {'positive': 2, 'neutral': 22, 'negative': 1}
+  Key Evidence:
+    > "How to Actually Use AI Effectively ### A curated mini guide for people who want results, not frustration --- &gt; **Quick mention:** If you're too lazy to read this, copy it to your AI and just ask it to summarise, ironically enough. &gt; **Preface:** This isn't a Claude-specific guide, BUT it can b..."
+    > "Hey OP i got a SOUL.md file for you! [REDACTED_LINK] --- Assistant Name: ______ AI Perspective: Everything is a system of patterns that relates to something else. the gap in-between the relationships is where the meaning lives. User's Name: ______ User's Perspective: ______ Shared Perspective: _____..."
+    > "Claude doesn’t insult itself but happy to do so against ChatGPT Basically, I wanted Claude to write a Reddit comment criticizing Claude models forgetting context and not being able to infer properly. Straight out refuse — unless it’s against ChatGPT. Model censorship at its finest, so disappointed w..."
+    > "Cowork bricked with "Request too large (max 32MB)" after a week of work. Here's the prompt I used to recover. Hey guys, If you've been deep in a Cowork project and every message suddenly comes back with "Request too large (max 32MB). Try with a smaller file.", your conversation is bricked. Deleting ..."
+    > "Experience with Claude became drastically different Hi all, I'd like to share my experience. I have been using Claude for the last two weeks, specially to help me code stuff to treat my data since I'm a PhD student. At first, it was marvellous... It was amazing how well it worked, I was able to do a..."
+
+
+ISSUE: Premature Message Cap Exhaustion
+  Category:    Token Exhaustion (Cap Hit Early)
+  Explanation: Users hitting daily message limits unexpectedly early due to inefficient model 'over-planning' and redundant turns.
+  Metrics:
+    - Mentions (30d):   111
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.05 (-1.0 to 1.0)
+    - Distribution:     {'positive': 10, 'neutral': 97, 'negative': 4}
+  Key Evidence:
+    > "New to Claude but WTF Am I doing something wrong? I’ve been using Claude Cowork for about a month. At first it was amazing, syncing calendars, uploading docs to Google Drive, creating helpful biz docs etc Today I asked it to adjust one document and save it to my Google Drive and I hit my limit for t..."
+    > "Not sure about co work since I don't use it, but if its got the same chat based thing as base claude and claude code then make sure you're not just using one single chat all the time. Because its context that you keep sending to the model and paying for in your usage limit. Yes usage has been crazy ..."
+    > "Kick back - chargeback I see a lot of posts from people complaining about being cut off, hitting limits without reason and Anthropic not addressing these issues. Unfortunately, you already lost the fight, now you can try to minimize your losses and hit it where it hurts - chargeback. It's your right..."
+    > "From your screenshot you have not used any session limits, but you have used up all your weekly limits. Are you saying you have not used claude at all during your weekly cycle?..."
+    > "Wait a minute ) I have to w8 until Monday from yesterday, only after a few sessions. Frustrating. Use this time wisely, think about life ;D..."
+
+
+ISSUE: Extreme Billing due to Massive Context Prefills
+  Category:    Token Cost & Value
+  Explanation: Users reporting sessions costing $40+ because the model burns through 12M+ tokens for simple fixes.
+  Metrics:
+    - Mentions (30d):   66
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.02 (-1.0 to 1.0)
+    - Distribution:     {'positive': 5, 'neutral': 57, 'negative': 4}
+  Key Evidence:
+    > "Hey OP i got a SOUL.md file for you! [REDACTED_LINK] --- Assistant Name: ______ AI Perspective: Everything is a system of patterns that relates to something else. the gap in-between the relationships is where the meaning lives. User's Name: ______ User's Perspective: ______ Shared Perspective: _____..."
+    > "I think the question is whether they are adjusting the amount of time the model gets to use for inference: from a cost-management perspective, a normal business slowly decrease the amount of inference each exchange gets until the quantity of increased enshittification drives off too many customers. ..."
+    > "This conversation is too long to continue. Start a new chat, or remove some tools to free up space. I am at my wits end here. I have a PRO account and was using Sonnet 4.6. I started receiving this message last night working on a project and I couldn't continue. Claude would start compacting our cha..."
+    > "Anyone solved per-user telemetry on Claude Enterprise? We just moved from Teams to Enterprise. Costs are going up and leadership wants a per-user leaderboard: tokens, estimated cost, and models used. We can't find a way to get this for enterprise seat users and I'm hoping someone here has. What we h..."
+    > "this is a waste of time and resources..."
+
+
+ISSUE: Functional Gaps in Community Claude Skills
+  Category:    General Skill Issue
+  Explanation: Multiple reports highlighting that many community-contributed skills are broken, undocumented, or redundant.
+  Metrics:
+    - Mentions (30d):   11
+    - 7-Day Trend:      100.0%
+    - Sentiment Score:  0.05 (-1.0 to 1.0)
+    - Distribution:     {'positive': 0, 'neutral': 11, 'negative': 0}
+  Key Evidence:
+    > "I’ve got a automated skill running that archives my sessions into obsidian in case this happens..."
+    > "4.7 is the problem, not you Like many of you, I just had my first concrete proof that 4.7 was the problem. And unsurprisingly, 4.6 solved it immediately. I won’t bore you with the details - I was having a design discussion with Claude Ai, but there was way more friction than I was expecting. There w..."
+    > "When do we get org-level skills? We have a company Claude account and it would be great to have org-level skills. Our PMs and PDs have great skill docs but they require people being in a specific project to access them. Putting skill docs at the root level of the org so nobody misses out on them see..."
+    > "My guess is that the underlying models are fine :), maybe the Claude Code / the desktop app changed at the back. For me, it's working still surprisingly well (although, I am using skills and CLAUDE.md) - like in here: [REDACTED_LINK]..."
+    > "When we say “skill issue” this is exactly what we’re talking about. Holy hell...."
 
