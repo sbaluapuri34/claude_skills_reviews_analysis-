@@ -11,7 +11,7 @@ def fetch_reddit_data():
     
     all_items = []
     seen_texts = set()
-    target_count = 350 # Target slightly more to ensure at least 300 after duplicates/filtering
+    target_count = 700 # Target slightly more to ensure at least 700 after duplicates/filtering
     
     def add_item(text, sub, created_utc):
         if not text:
@@ -36,10 +36,10 @@ def fetch_reddit_data():
     for sub in subreddits:
         print(f"Fetching from r/{sub}...")
         after = None
-        pages_to_fetch = 5 if sub == "claudeskills" else 2 # Deeper pagination for priority sub
+        pages_to_fetch = 15
         
         for page in range(pages_to_fetch):
-            if len(all_items) >= target_count and sub != "claudeskills":
+            if len(all_items) >= target_count:
                 break
                 
             url = f"https://www.reddit.com/r/{sub}/new.json?limit=100"
@@ -48,6 +48,11 @@ def fetch_reddit_data():
             
             try:
                 response = requests.get(url, headers=headers)
+                if response.status_code == 429:
+                    print(f"Rate limited (429). Waiting 30s...")
+                    time.sleep(30)
+                    response = requests.get(url, headers=headers)
+                
                 if response.status_code != 200:
                     print(f"Failed to fetch r/{sub} page {page}: {response.status_code}")
                     break
@@ -59,32 +64,31 @@ def fetch_reddit_data():
                 
                 for post in children:
                     pdata = post["data"]
-                    # Add post text
                     title = pdata.get("title", "")
                     body = pdata.get("selftext", "")
                     combined_text = f"{title}\n\n{body}" if body else title
                     add_item(combined_text, sub, pdata.get("created_utc"))
                     
-                    # Fetch comments if post has them and we still need more items
-                    if pdata.get("num_comments", 0) > 0 and len(all_items) < target_count * 1.5:
+                    # Fetch comments only if we are far from target and post is large
+                    if pdata.get("num_comments", 0) > 10 and len(all_items) < target_count * 0.7:
                         comment_url = f"https://www.reddit.com/r/{sub}/comments/{pdata['id']}.json"
                         c_resp = requests.get(comment_url, headers=headers)
                         if c_resp.status_code == 200:
                             c_data = c_resp.json()
                             if isinstance(c_data, list) and len(c_data) > 1:
                                 comments = c_data[1].get("data", {}).get("children", [])
-                                for comment in comments:
+                                for comment in comments[:10]: # Only top 10 comments
                                     if comment["kind"] == "t1":
                                         cbody = comment["data"].get("body", "")
                                         if cbody and cbody not in ["[deleted]", "[removed]"]:
                                             add_item(cbody, sub, comment["data"].get("created_utc"))
-                        time.sleep(0.5) # Throttle comment fetching
+                        time.sleep(1.5) # Increased throttle
                 
                 after = data.get("data", {}).get("after")
                 if not after:
                     break
                 
-                time.sleep(1) # Be nice between pages
+                time.sleep(2) # Increased sleep between pages
             except Exception as e:
                 print(f"Error fetching r/{sub}: {e}")
                 break
@@ -92,7 +96,7 @@ def fetch_reddit_data():
         print(f"Current total items: {len(all_items)}")
 
     # Final trim and save
-    final_items = all_items[:400] # Cap it reasonably
+    final_items = all_items[:750] # Cap it reasonably
     print(f"Saving {len(final_items)} items to reddit_reviews.json")
     
     with open("reddit_reviews.json", "w", encoding="utf-8") as f:
