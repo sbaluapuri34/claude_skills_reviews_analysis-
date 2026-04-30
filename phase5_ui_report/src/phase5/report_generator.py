@@ -2,6 +2,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from datetime import datetime
+from typing import Dict
 
 class ReportGenerator:
     def __init__(self, analytics_data: Dict):
@@ -26,18 +27,18 @@ class ReportGenerator:
         for i in issues[:7]:
             trend = i['metrics']['trend_percentage']
             trend_str = f"+{trend}%" if trend > 0 else f"{trend}%"
-            report += f"| {i['title']} | {i['metrics']['mentions']} | {trend_str} | {i['metrics']['avg_sentiment']} |\n"
+            report += f"| {i['title']} | {i['metrics']['total_mentions_30d']} | {trend_str} | {i['metrics']['avg_sentiment']} |\n"
         
         report += "\n---\n\n"
         
         for i, issue in enumerate(issues[:7], 1):
             report += f"### {i}. {issue['title']}\n"
             report += f"**Theme**: {issue['theme']}  \n"
-            report += f"**Description**: {issue['detailed_description']}  \n"
-            report += f"**Metrics**: {issue['metrics']['mentions']} mentions | {issue['metrics']['avg_sentiment']} avg sentiment  \n\n"
+            report += f"**Description**: {issue['description']}  \n"
+            report += f"**Metrics**: {issue['metrics']['total_mentions_30d']} mentions | {issue['metrics']['avg_sentiment']} avg sentiment  \n\n"
             
             report += "#### Evidence Snippets\n"
-            for snippet in issue['evidence_snippets']:
+            for snippet in issue['evidence']:
                 report += f"- \"{snippet.strip()}\"\n"
             report += "\n"
             

@@ -8,13 +8,13 @@ def test_report_generation():
                 "issue_id": "test_issue",
                 "theme": "Test Theme",
                 "title": "Descriptive Title",
-                "detailed_description": "Detailed description",
+                "description": "Detailed description",
                 "metrics": {
-                    "mentions": 10,
+                    "total_mentions_30d": 10,
                     "avg_sentiment": -0.5,
                     "trend_percentage": 50.0
                 },
-                "evidence_snippets": ["Evidence 1", "Evidence 2"]
+                "evidence": ["Evidence 1", "Evidence 2"]
             }
         ]
     }
