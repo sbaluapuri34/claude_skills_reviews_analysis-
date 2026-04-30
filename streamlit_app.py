@@ -25,55 +25,6 @@ if load_dotenv:
 
 st.set_page_config(page_title="Claude Review Intelligence", layout="wide")
 
-# --- CUSTOM UI THEMING ---
-st.markdown("""
-    <style>
-    .stApp {
-        background-color: #C27A63; /* Terracotta background from image */
-        background-image: linear-gradient(180deg, rgba(194, 122, 99, 0.9) 0%, rgba(194, 122, 99, 0.8) 100%);
-    }
-    
-    /* Glassmorphism containers */
-    [data-testid="stMetric"], .stExpander, div[data-testid="stExpander"], .stTable {
-        background: rgba(255, 255, 255, 0.1) !important;
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        padding: 20px;
-        color: white !important;
-    }
-
-    h1, h2, h3, p, span, label {
-        color: #ffffff !important;
-        font-family: 'Inter', sans-serif;
-    }
-
-    .stButton>button {
-        background-color: #ffffff !important;
-        color: #C27A63 !important;
-        border-radius: 20px;
-        border: none;
-        font-weight: bold;
-    }
-
-    /* Chat bubble styling */
-    [data-testid="stChatMessage"] {
-        background: rgba(255, 255, 255, 0.05) !important;
-        border-radius: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        margin-bottom: 10px;
-    }
-
-    /* Pink Sidebar */
-    [data-testid="stSidebar"] {
-        background-color: #E89CB1 !important; /* Muted vibrant pink */
-    }
-    [data-testid="stSidebar"] * {
-        color: white !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
 st.title("🚀 Claude Review Intelligence Dashboard")
 st.markdown("Analyzing user feedback across Reddit, Google Play, and Trustpilot.")
 
