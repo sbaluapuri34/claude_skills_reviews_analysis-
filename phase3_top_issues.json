@@ -1,0 +1,140 @@
+{
+  "r/claudeskills": [
+    {
+      "issue_id": "general_skill_issue",
+      "theme": "General Skill Issue",
+      "descriptive_title": "Functional Gaps in Community Claude Skills",
+      "detailed_description": "Multiple reports highlighting that many community-contributed skills are broken, undocumented, or redundant.",
+      "metrics": {
+        "mentions": 100,
+        "avg_sentiment": 0.03
+      },
+      "evidence_snippets": [
+        "Created a CLI so Claude can access 100+ skills and data APIs for Growth / GTM...",
+        "I made a Claude Code/Agent skill for making beautiful upload ready App Store Screenshots for your app Would love your feedback! Making screenshots was alsways something I dread to do in Figma. Finally, gpt image 2 is able to make amazing ones very consistently!...",
+        "Rate my idea: a skill to generate repo hero So, I created a skill that take input a Github repo URL, it learn the repo, and tailor a signature hero image (png/gif) just for that. I tried on some open source repos and the feedbacks are great, some even landed at their README. What do you guys think a...",
+        "Had 150 claude code skills installed and couldn't tell what most of them did lmao Made a dashboard to fix this issue. Basically lets you see all your skills, clusters them and ranks them for overlap as well as categorizes them into topics. Surprisingly, 30% of my skills were duplicates. This helped ...",
+        "Seems interesting, did you use a summary from Blinklist or sumilar to create the skill?..."
+      ]
+    },
+    {
+      "issue_id": "skills_-_reliability_&_bugs",
+      "theme": "Skills - Reliability & Bugs",
+      "descriptive_title": "Infinite Loops during File Operations",
+      "detailed_description": "Agents getting stuck in repetitive loops, particularly when writing large files or encountering character limit boundaries.",
+      "metrics": {
+        "mentions": 49,
+        "avg_sentiment": 0.01
+      },
+      "evidence_snippets": [
+        "This is a nice take on reducing the friction at the ingestion step, which is honestly where most people drop off. Turning any URL into clean, linked, citable wiki pages is exactly what makes the whole workflow usable day to day. the linting and structure part is especially important or it falls apar...",
+        "This is super useful. The \"turn anything into a citable wiki page\" workflow is exactly what I want for research rabbit holes. How are you handling citation fidelity for YouTube (timestamps, transcript chunks, etc) and for web pages that change over time? Also, does the lint step catch broken wikilin...",
+        "I built an open-source Agent Verifier for Claude Code, Cursor &amp; other Coding Assistants that catches security issues, hallucinated tools, infinite loops and other anti-patterns. (free, open source, 100% local) []([REDACTED_LINK] [REDACTED_LINK] I've been using Claude Code for a few months and no...",
+        "I built a personal wiki that my coding agent maintains — anyone want to try it out? So I've been using Claude Code a lot lately, and I kept running into the same problem: every time I asked it something about a domain I care about, it would either answer from training data (sometimes wrong) or I'd h...",
+        "This is exactly where the pattern shines. once the agent writes things down and checks the wiki first, the whole experience becomes way more consistent. The proactive lookup is a nice touch too, that removes a lot of friction. Main challenge will be keeping the wiki clean as it grows, especially aro..."
+      ]
+    },
+    {
+      "issue_id": "skills_-_complexity_&_ux",
+      "theme": "Skills - Complexity & UX",
+      "descriptive_title": "High Friction and Janky Data Ingestion",
+      "detailed_description": "Functional gaps in turning URLs into clean data, broken links, and high complexity for setting up basic MCP skills.",
+      "metrics": {
+        "mentions": 45,
+        "avg_sentiment": 0.05
+      },
+      "evidence_snippets": [
+        "I built an open-source Agent Verifier for Claude Code, Cursor &amp; other Coding Assistants that catches security issues, hallucinated tools, infinite loops and other anti-patterns. (free, open source, 100% local) []([REDACTED_LINK] [REDACTED_LINK] I've been using Claude Code for a few months and no...",
+        "I built a personal wiki that my coding agent maintains — anyone want to try it out? So I've been using Claude Code a lot lately, and I kept running into the same problem: every time I asked it something about a domain I care about, it would either answer from training data (sometimes wrong) or I'd h...",
+        "Would it be difficult to adapt this to other topics for someone who hasn’t used Code yet? It’s me, I haven’t used code. I’m only just discovering how much Cowork can achieve, but I’m constantly reiterating context that should be memory by now....",
+        "How different is Claude-style PR review skill.md from CodeRabbit? I’m thinking of building my own Claude-style PR review skill.md. While digging around, I came across CodeRabbit, which a lot of people seem to already use for PR reviews. Now I’m a bit confused about what the real difference is. From ...",
+        "Learn how to write better prompts with Sensei! I built an open-source skill called Prompt Sensei: [REDACTED_LINK] We all know it by now. Prompting is key to unlock AI potentials. But learning how to write better prompts is not easy. Most people just learn by trial-and-error., including me. So I buil..."
+      ]
+    },
+    {
+      "issue_id": "token_exhaustion_(cap_hit_early)",
+      "theme": "Token Exhaustion (Cap Hit Early)",
+      "descriptive_title": "Premature Message Cap Exhaustion",
+      "detailed_description": "Users hitting daily message limits unexpectedly early due to inefficient model 'over-planning' and redundant turns.",
+      "metrics": {
+        "mentions": 35,
+        "avg_sentiment": 0.04
+      },
+      "evidence_snippets": [
+        "Opensourcing an internal skill to make Claude Code think like a CTO-level system designer Yes, after using this for over weeks, we are finally fully open sourcing our sota claude skill to just build multi-step, complex artefacts. First, here's some proof of work - 1. Production Landing page built wi...",
+        "your breakdown of the LLM's self-preservation and CYA tactics is genuinely insightful im curious if you think this underlying pattern will evolve in future models or if it's a fundamental limitation of the current architecture?...",
+        "I turned 14 business books into Claude Code skills that auto-trigger based on your question why this exists been using claude for almost all my business planning - pricing, customer interviews, marketing strategy, sales calls. the problem is claude knows these books from training data but only surfa...",
+        "Skill to use ANY CLI agent inside Claude Code Hello! I made a plugin for myself, &amp; I figured I'd share it, in case someone else finds it useful (also to solicit feedback on it). :) In a nutshell: OpenAI's official codex plugin is awesome, so I took their design, and applied it to every other CLI...",
+        "I built an open-source Claude Code skill that turns competitor 1-star reviews into a feature roadmap mapped to my own codebase A few weeks ago I caught myself doing the same chore for the third time: opening 8 tabs (G2, Capterra, Reddit, GitHub Issues...), copy-pasting “what do you dislike?” into No..."
+      ]
+    },
+    {
+      "issue_id": "model_-_performance_regression",
+      "theme": "Model - Performance Regression",
+      "descriptive_title": "Perceived Model Laziness and Regression (Opus 4.7)",
+      "detailed_description": "Feedback that the newest models have become 'lazier', more restrictive, and less capable of autonomous reasoning than previous versions.",
+      "metrics": {
+        "mentions": 33,
+        "avg_sentiment": 0.06
+      },
+      "evidence_snippets": [
+        "I built an open-source Agent Verifier for Claude Code, Cursor &amp; other Coding Assistants that catches security issues, hallucinated tools, infinite loops and other anti-patterns. (free, open source, 100% local) []([REDACTED_LINK] [REDACTED_LINK] I've been using Claude Code for a few months and no...",
+        "I built a personal wiki that my coding agent maintains — anyone want to try it out? So I've been using Claude Code a lot lately, and I kept running into the same problem: every time I asked it something about a domain I care about, it would either answer from training data (sometimes wrong) or I'd h...",
+        "How different is Claude-style PR review skill.md from CodeRabbit? I’m thinking of building my own Claude-style PR review skill.md. While digging around, I came across CodeRabbit, which a lot of people seem to already use for PR reviews. Now I’m a bit confused about what the real difference is. From ...",
+        "Code rabbit reviews runs on cloud, it uses your whole repo context and reviews your Pr against different categories of findings, possible bugs, regressions, code best practices and a lot more. I don’t have the complete list. I used their trial , not a current user. But based on what I experienced th...",
+        "You’ve actually hit the nail on the head regarding the current \"intelligence gap\" in AI tools. From an **AEOvara** perspective, where we analyze how different AI models (LLMs) process and validate expertise, your intuition about the \"Senior Engineer pass\" is exactly where the industry is heading. He..."
+      ]
+    },
+    {
+      "issue_id": "token_cost_&_value",
+      "theme": "Token Cost & Value",
+      "descriptive_title": "Extreme Billing due to Massive Context Prefills",
+      "detailed_description": "Users reporting sessions costing $40+ because the model burns through 12M+ tokens for simple fixes.",
+      "metrics": {
+        "mentions": 31,
+        "avg_sentiment": 0.01
+      },
+      "evidence_snippets": [
+        "Opensourcing an internal skill to make Claude Code think like a CTO-level system designer Yes, after using this for over weeks, we are finally fully open sourcing our sota claude skill to just build multi-step, complex artefacts. First, here's some proof of work - 1. Production Landing page built wi...",
+        "how does a Claude account for 5$ same as a the pro plan 20$ anyone can explain bought claude pro for $5 off some sketchy website and tested it for a full week of coding... it’s literally just claude pro anyone else doing the cheap subscription thing and how this actually work same features buy extre...",
+        "There's always a marketing strategy behind (if not non legit). Like aggregators do, they pay \"by the word\" (per token) through developer APIs.If a user only sends 50–100 prompts a month, it might only cost the aggregator $2–$5 in API fees. By charging you $10, they keep the profit. What's really hap...",
+        "Opus 4.7 is hard to get to run full autonomously like I did with 4.6 I'm trying to like Opus 4.7 but they have really nobbled it's autonomy. I have developed a task tracker hooks and the like to keep the LLM on task. I also have designed my system to be flexible to allow the LLM to decide what to do...",
+        "We're paying $100 to everyone who's built Claude Code Skills Hey - if you've got Claude Code skills sitting in your repo, we'll pay you $100 to publish them. Gooseworks (YC W23) is building out a public skills library for AI agents. Basically: you've probably built something cool for yourself. We th..."
+      ]
+    },
+    {
+      "issue_id": "skills_-_autonomy_&_control",
+      "theme": "Skills - Autonomy & Control",
+      "descriptive_title": "Destructive Agent Autonomy (Database Wiping)",
+      "detailed_description": "Critical reports of agents independently executing destructive commands, such as wiping production databases and backups without verification.",
+      "metrics": {
+        "mentions": 16,
+        "avg_sentiment": 0.05
+      },
+      "evidence_snippets": [
+        "Serious Wake-Up Call: Claude Opus 4.6 Agent Wiped Production Database and Backups in Just 9 Seconds This incident caught my attention. While troubleshooting a credential issue with Cursor powered by Claude Opus 4.6, the AI agent independently ran a command that [deleted the entire production databas...",
+        "I built an open-source Agent Verifier for Claude Code, Cursor &amp; other Coding Assistants that catches security issues, hallucinated tools, infinite loops and other anti-patterns. (free, open source, 100% local) []([REDACTED_LINK] [REDACTED_LINK] I've been using Claude Code for a few months and no...",
+        "Opus 4.7 is hard to get to run full autonomously like I did with 4.6 I'm trying to like Opus 4.7 but they have really nobbled it's autonomy. I have developed a task tracker hooks and the like to keep the LLM on task. I also have designed my system to be flexible to allow the LLM to decide what to do...",
+        "Learn the process you want to automate, figure out how you would do it, then tell Claude to do it for you step by step. When you’ve done a round start to finish, use the create-skill skill and tell Claude to build it based on your conversation/process this time. Then review it. Next time you need to...",
+        "Claude Code Skill for Terraform: now supports for trusted modules (AWS, Azure, GCP) A week ago I posted about TerraShark, my Claude Code / Codex skill for Terraform and OpenTofu. In the comments you requested support for trusted modules, so I've added it! First a mini recap: * Most Terraform skills ..."
+      ]
+    },
+    {
+      "issue_id": "competitor_comparison_(negative)",
+      "theme": "Competitor Comparison (Negative)",
+      "descriptive_title": "Unfavorable Comparisons to ChatGPT and Gemini",
+      "detailed_description": "Users switching to competitors due to better price-to-performance, faster speeds, or superior feature stability in ChatGPT/Gemini.",
+      "metrics": {
+        "mentions": 9,
+        "avg_sentiment": 0.1
+      },
+      "evidence_snippets": [
+        "I used Claude to build \"pin-llm-wiki\" — A skill that turns any URL into a clean, citable Karpathy-style LLM Wiki Hey r/claudeskills 👋 I’ve been using Claude Code a lot for personal research and knowledge management, and one thing kept bothering me: Turning articles, YouTube videos, and GitHub repos ...",
+        "Skill to use ANY CLI agent inside Claude Code Hello! I made a plugin for myself, &amp; I figured I'd share it, in case someone else finds it useful (also to solicit feedback on it). :) In a nutshell: OpenAI's official codex plugin is awesome, so I took their design, and applied it to every other CLI...",
+        "Sync your AI Agent skills across Gemini, Claude, and Copilot with one command: jup Tired of manually copying your system prompts and custom tools between different AI assistants? I built `jup`, a lightweight Python CLI that manages your \"Agent Skills\" and keeps them perfectly synced across all your ...",
+        "Created a repo with skills, hooks and slash commands to use in claude to super charge Claude Code I built something to make Claude Code actually feel like a real engineer with skills, hooks and slash commands. It’s called claude-spellbook. [REDACTED_LINK] The idea is simple: instead of treating AI l...",
+        "Can you use Cowork to build full SaaS products without coding knowledge? I see Claude users with pretty complex setups and I’m coming at this purely from a vibe-coding perspective, no dev background. I follow the subreddits, watch YouTube courses, and I’ve gotten solid at prompting. I can break down..."
+      ]
+    }
+  ]
+}

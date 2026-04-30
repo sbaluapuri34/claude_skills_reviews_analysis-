@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Data
+*.json
+!reddit_reviews.json
+!reddit_preprocessed.json
+!reddit_classified.json
+!phase3_top_issues.json
+!phase4_analytics.json
+
+# Reports
+*.md
+!README.md
+!SYSTEM_ARCHITECTURE.md
+*.txt
+!major_issues_summary.txt
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
