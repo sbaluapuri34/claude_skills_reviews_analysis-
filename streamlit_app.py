@@ -53,6 +53,7 @@ selected_model = st.sidebar.selectbox(
     ["grok-2", "grok-latest", "grok-beta", "grok-2-1212"],
     index=0
 )
+debug_mode = st.sidebar.checkbox("Enable Debug Mode")
 
 # Main Dashboard
 st.header(f"Insights for {selected_source}")
@@ -137,5 +138,7 @@ if prompt := st.chat_input("Ask about the reviews..."):
         
         with st.spinner(f"Analyzing data with {selected_model}..."):
             response = chatbot.query(prompt, context)
+            if "Error communicating" in response and debug_mode:
+                st.error(f"DEBUG INFO: {response}")
             st.markdown(response)
             st.session_state.messages.append({"role": "assistant", "content": response})
