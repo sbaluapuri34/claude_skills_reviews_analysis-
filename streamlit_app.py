@@ -43,9 +43,16 @@ if not data:
     st.error("No analytics data found. Please run the master pipeline (main.py) to generate data.")
     st.stop()
 
-# Sidebar - Source Selection
+# Sidebar - Source & Model Selection
 sources = list(data.keys())
 selected_source = st.sidebar.selectbox("Select Review Source", sources)
+
+st.sidebar.divider()
+selected_model = st.sidebar.selectbox(
+    "Select Grok Model", 
+    ["grok-2", "grok-latest", "grok-beta", "grok-2-1212"],
+    index=0
+)
 
 # Main Dashboard
 st.header(f"Insights for {selected_source}")
@@ -126,9 +133,9 @@ if prompt := st.chat_input("Ask about the reviews..."):
             st.stop()
         
         context = load_analytics_context(selected_source)
-        chatbot = ChatbotEngine(api_key=api_key)
+        chatbot = ChatbotEngine(api_key=api_key, model=selected_model)
         
-        with st.spinner("Analyzing data with Grok..."):
+        with st.spinner(f"Analyzing data with {selected_model}..."):
             response = chatbot.query(prompt, context)
             st.markdown(response)
             st.session_state.messages.append({"role": "assistant", "content": response})
