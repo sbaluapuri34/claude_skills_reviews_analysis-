@@ -45,6 +45,11 @@ THEME_DICTIONARY = [
         label="Competitor Comparison (Negative)",
         keywords=["chatgpt is better", "gpt4 is better", "gemini is better", "switching", "leaving", "cancelled", "openai", "copilot"],
         description="Users expressing intent to leave or comparing Claude unfavorably to competitors."
+    ),
+    ThemeDefinition(
+        label="Skills - Non-Technical Friction",
+        keywords=["writing", "report", "formatting", "context", "memory", "business", "planning", "non-tech", "non-technical", "prds", "user stories", "consistency", "repeat", "reiterate", "cowork"],
+        description="Friction for non-technical users, including context loss, poor writing/reporting quality, and complexity for non-coders."
     )
 ]
 
@@ -114,6 +119,11 @@ def summarize_issue(theme: str, evidence: List[str]) -> Dict[str, str]:
         return {
             "title": "Unfavorable Comparisons to ChatGPT and Gemini",
             "description": "Users switching to competitors due to better price-to-performance, faster speeds, or superior feature stability in ChatGPT/Gemini."
+        }
+    if theme == "Skills - Non-Technical Friction":
+        return {
+            "title": "Context Loss & Inconsistent Business Analysis",
+            "description": "Non-technical users reporting frequent context loss, repetitive prompting requirements, and generic/hallucinated results for business writing and reporting tasks."
         }
     if theme == "General Skill Issue":
         return {

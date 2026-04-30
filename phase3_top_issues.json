@@ -6,7 +6,7 @@
       "descriptive_title": "Functional Gaps in Community Claude Skills",
       "detailed_description": "Multiple reports highlighting that many community-contributed skills are broken, undocumented, or redundant.",
       "metrics": {
-        "mentions": 100,
+        "mentions": 89,
         "avg_sentiment": 0.03
       },
       "evidence_snippets": [
@@ -15,6 +15,23 @@
         "Rate my idea: a skill to generate repo hero So, I created a skill that take input a Github repo URL, it learn the repo, and tailor a signature hero image (png/gif) just for that. I tried on some open source repos and the feedbacks are great, some even landed at their README. What do you guys think a...",
         "Had 150 claude code skills installed and couldn't tell what most of them did lmao Made a dashboard to fix this issue. Basically lets you see all your skills, clusters them and ranks them for overlap as well as categorizes them into topics. Surprisingly, 30% of my skills were duplicates. This helped ...",
         "Seems interesting, did you use a summary from Blinklist or sumilar to create the skill?..."
+      ]
+    },
+    {
+      "issue_id": "skills_-_non-technical_friction",
+      "theme": "Skills - Non-Technical Friction",
+      "descriptive_title": "Context Loss & Inconsistent Business Analysis",
+      "detailed_description": "Non-technical users reporting frequent context loss, repetitive prompting requirements, and generic/hallucinated results for business writing and reporting tasks.",
+      "metrics": {
+        "mentions": 74,
+        "avg_sentiment": 0.01
+      },
+      "evidence_snippets": [
+        "This is super useful. The \"turn anything into a citable wiki page\" workflow is exactly what I want for research rabbit holes. How are you handling citation fidelity for YouTube (timestamps, transcript chunks, etc) and for web pages that change over time? Also, does the lint step catch broken wikilin...",
+        "I built an open-source Agent Verifier for Claude Code, Cursor &amp; other Coding Assistants that catches security issues, hallucinated tools, infinite loops and other anti-patterns. (free, open source, 100% local) []([REDACTED_LINK] [REDACTED_LINK] I've been using Claude Code for a few months and no...",
+        "I built a personal wiki that my coding agent maintains — anyone want to try it out? So I've been using Claude Code a lot lately, and I kept running into the same problem: every time I asked it something about a domain I care about, it would either answer from training data (sometimes wrong) or I'd h...",
+        "Would it be difficult to adapt this to other topics for someone who hasn’t used Code yet? It’s me, I haven’t used code. I’m only just discovering how much Cowork can achieve, but I’m constantly reiterating context that should be memory by now....",
+        "Code rabbit reviews runs on cloud, it uses your whole repo context and reviews your Pr against different categories of findings, possible bugs, regressions, code best practices and a lot more. I don’t have the complete list. I used their trial , not a current user. But based on what I experienced th..."
       ]
     },
     {
@@ -117,23 +134,6 @@
         "Opus 4.7 is hard to get to run full autonomously like I did with 4.6 I'm trying to like Opus 4.7 but they have really nobbled it's autonomy. I have developed a task tracker hooks and the like to keep the LLM on task. I also have designed my system to be flexible to allow the LLM to decide what to do...",
         "Learn the process you want to automate, figure out how you would do it, then tell Claude to do it for you step by step. When you’ve done a round start to finish, use the create-skill skill and tell Claude to build it based on your conversation/process this time. Then review it. Next time you need to...",
         "Claude Code Skill for Terraform: now supports for trusted modules (AWS, Azure, GCP) A week ago I posted about TerraShark, my Claude Code / Codex skill for Terraform and OpenTofu. In the comments you requested support for trusted modules, so I've added it! First a mini recap: * Most Terraform skills ..."
-      ]
-    },
-    {
-      "issue_id": "competitor_comparison_(negative)",
-      "theme": "Competitor Comparison (Negative)",
-      "descriptive_title": "Unfavorable Comparisons to ChatGPT and Gemini",
-      "detailed_description": "Users switching to competitors due to better price-to-performance, faster speeds, or superior feature stability in ChatGPT/Gemini.",
-      "metrics": {
-        "mentions": 9,
-        "avg_sentiment": 0.1
-      },
-      "evidence_snippets": [
-        "I used Claude to build \"pin-llm-wiki\" — A skill that turns any URL into a clean, citable Karpathy-style LLM Wiki Hey r/claudeskills 👋 I’ve been using Claude Code a lot for personal research and knowledge management, and one thing kept bothering me: Turning articles, YouTube videos, and GitHub repos ...",
-        "Skill to use ANY CLI agent inside Claude Code Hello! I made a plugin for myself, &amp; I figured I'd share it, in case someone else finds it useful (also to solicit feedback on it). :) In a nutshell: OpenAI's official codex plugin is awesome, so I took their design, and applied it to every other CLI...",
-        "Sync your AI Agent skills across Gemini, Claude, and Copilot with one command: jup Tired of manually copying your system prompts and custom tools between different AI assistants? I built `jup`, a lightweight Python CLI that manages your \"Agent Skills\" and keeps them perfectly synced across all your ...",
-        "Created a repo with skills, hooks and slash commands to use in claude to super charge Claude Code I built something to make Claude Code actually feel like a real engineer with skills, hooks and slash commands. It’s called claude-spellbook. [REDACTED_LINK] The idea is simple: instead of treating AI l...",
-        "Can you use Cowork to build full SaaS products without coding knowledge? I see Claude users with pretty complex setups and I’m coming at this purely from a vibe-coding perspective, no dev background. I follow the subreddits, watch YouTube courses, and I’ve gotten solid at prompting. I can break down..."
       ]
     }
   ]
