@@ -29,13 +29,19 @@ st.title("🚀 Claude Review Intelligence Dashboard")
 st.markdown("Analyzing user feedback across Reddit, Google Play, and Trustpilot.")
 
 # Load Data
-@st.cache_data
 def load_data():
     analytics_path = Path("phase4_analytics.json")
     if analytics_path.exists():
+        # Get modification time to help with cache busting
+        mtime = os.path.getmtime(analytics_path)
         with open(analytics_path, "r", encoding="utf-8") as f:
             return json.load(f)
     return {}
+
+# Button to clear cache
+if st.sidebar.button("🔄 Force Refresh Data"):
+    st.cache_data.clear()
+    st.rerun()
 
 data = load_data()
 
