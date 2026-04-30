@@ -4,7 +4,10 @@ import os
 import pandas as pd
 import sys
 from pathlib import Path
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    load_dotenv = None
 
 # Add all phase source directories to sys.path so they can be imported
 root_dir = Path(__file__).parent
@@ -17,7 +20,8 @@ sys.path.append(str(root_dir / "phase6_chatbot" / "src"))
 from phase5.report_generator import ReportGenerator
 from phase6.chatbot_engine import ChatbotEngine, load_analytics_context
 
-load_dotenv() 
+if load_dotenv:
+    load_dotenv() 
 
 st.set_page_config(page_title="Claude Review Intelligence", layout="wide")
 
