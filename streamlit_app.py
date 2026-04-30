@@ -49,8 +49,8 @@ selected_source = st.sidebar.selectbox("Select Review Source", sources)
 
 st.sidebar.divider()
 selected_model = st.sidebar.selectbox(
-    "Select Grok Model", 
-    ["grok-2", "grok-latest", "grok-beta", "grok-2-1212"],
+    "Select Model (Groq)", 
+    ["llama-3.3-70b-versatile", "llama-3.1-8b-instant", "mixtral-8x7b-32768"],
     index=0
 )
 debug_mode = st.sidebar.checkbox("Enable Debug Mode")

@@ -3,10 +3,10 @@ from openai import OpenAI
 from typing import List, Dict
 
 class ChatbotEngine:
-    def __init__(self, api_key: str, model: str = "grok-2"):
+    def __init__(self, api_key: str, model: str = "llama-3.3-70b-versatile"):
         self.client = OpenAI(
             api_key=api_key,
-            base_url="https://api.x.ai/v1",
+            base_url="https://api.groq.com/openai/v1",
         )
         self.model = model
 
