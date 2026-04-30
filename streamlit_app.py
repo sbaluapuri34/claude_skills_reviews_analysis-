@@ -118,10 +118,11 @@ if prompt := st.chat_input("Ask about the reviews..."):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        api_key = os.getenv("XAI_API_KEY") 
+        # Check environment variables then Streamlit secrets
+        api_key = os.getenv("XAI_API_KEY") or st.secrets.get("XAI_API_KEY")
         
         if not api_key:
-            st.error("XAI_API_KEY not found in environment. Please set it in secrets on Streamlit Cloud.")
+            st.error("XAI_API_KEY not found. Please ensure it is set in 'Settings > Secrets' on Streamlit Cloud.")
             st.stop()
         
         context = load_analytics_context(selected_source)
