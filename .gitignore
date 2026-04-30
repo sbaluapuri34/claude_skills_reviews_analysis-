@@ -19,6 +19,7 @@ venv/
 !SYSTEM_ARCHITECTURE.md
 *.txt
 !major_issues_summary.txt
+!requirements.txt
 
 # IDEs
 .vscode/
