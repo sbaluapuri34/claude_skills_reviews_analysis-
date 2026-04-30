@@ -11,7 +11,7 @@ def fetch_reddit_data():
     
     all_items = []
     seen_texts = set()
-    target_count = 700 # Target slightly more to ensure at least 700 after duplicates/filtering
+    target_count = 2100 # Target enough for 700 per sub
     
     def add_item(text, sub, created_utc):
         if not text:
@@ -33,13 +33,16 @@ def fetch_reddit_data():
         })
         seen_texts.add(text)
 
+    # target_count is set above
+    
     for sub in subreddits:
         print(f"Fetching from r/{sub}...")
         after = None
-        pages_to_fetch = 15
+        pages_to_fetch = 25 # Very deep fetch
+        sub_count = 0
         
         for page in range(pages_to_fetch):
-            if len(all_items) >= target_count:
+            if sub_count >= 700: 
                 break
                 
             url = f"https://www.reddit.com/r/{sub}/new.json?limit=100"
@@ -49,8 +52,8 @@ def fetch_reddit_data():
             try:
                 response = requests.get(url, headers=headers)
                 if response.status_code == 429:
-                    print(f"Rate limited (429). Waiting 30s...")
-                    time.sleep(30)
+                    print(f"Rate limited (429) on r/{sub}. Waiting 90s...")
+                    time.sleep(90) # Longer wait for deep fetch
                     response = requests.get(url, headers=headers)
                 
                 if response.status_code != 200:
@@ -67,36 +70,56 @@ def fetch_reddit_data():
                     title = pdata.get("title", "")
                     body = pdata.get("selftext", "")
                     combined_text = f"{title}\n\n{body}" if body else title
-                    add_item(combined_text, sub, pdata.get("created_utc"))
                     
-                    # Fetch comments only if we are far from target and post is large
-                    if pdata.get("num_comments", 0) > 10 and len(all_items) < target_count * 0.7:
+                    if combined_text and len(combined_text.split()) > 1 and combined_text not in seen_texts:
+                        dt = datetime.fromtimestamp(pdata.get("created_utc")).isoformat()
+                        all_items.append({
+                            "source": "reddit",
+                            "subreddit": f"r/{sub}",
+                            "text": combined_text,
+                            "created_at": dt
+                        })
+                        seen_texts.add(combined_text)
+                        sub_count += 1
+                    
+                    # Fetch comments sparingly but enough to reach target
+                    if pdata.get("num_comments", 0) > 3 and sub_count < 700:
                         comment_url = f"https://www.reddit.com/r/{sub}/comments/{pdata['id']}.json"
                         c_resp = requests.get(comment_url, headers=headers)
                         if c_resp.status_code == 200:
                             c_data = c_resp.json()
                             if isinstance(c_data, list) and len(c_data) > 1:
                                 comments = c_data[1].get("data", {}).get("children", [])
-                                for comment in comments[:10]: # Only top 10 comments
+                                for comment in comments[:15]: # More comments
                                     if comment["kind"] == "t1":
                                         cbody = comment["data"].get("body", "")
-                                        if cbody and cbody not in ["[deleted]", "[removed]"]:
-                                            add_item(cbody, sub, comment["data"].get("created_utc"))
-                        time.sleep(1.5) # Increased throttle
+                                        if cbody and cbody not in ["[deleted]", "[removed]"] and cbody not in seen_texts:
+                                            all_items.append({
+                                                "source": "reddit",
+                                                "subreddit": f"r/{sub}",
+                                                "text": cbody,
+                                                "created_at": datetime.fromtimestamp(comment["data"].get("created_utc")).isoformat()
+                                            })
+                                            seen_texts.add(cbody)
+                                            sub_count += 1
+                                            if sub_count >= 700: break
+                        time.sleep(2)
                 
                 after = data.get("data", {}).get("after")
                 if not after:
                     break
                 
-                time.sleep(2) # Increased sleep between pages
+                time.sleep(4)
             except Exception as e:
                 print(f"Error fetching r/{sub}: {e}")
                 break
+        
+        print(f"Fetched {sub_count} items from r/{sub}. Total: {len(all_items)}")
                 
         print(f"Current total items: {len(all_items)}")
 
     # Final trim and save
-    final_items = all_items[:750] # Cap it reasonably
+    final_items = all_items[:2100] # Cap it high for multi-source depth
     print(f"Saving {len(final_items)} items to reddit_reviews.json")
     
     with open("reddit_reviews.json", "w", encoding="utf-8") as f:
