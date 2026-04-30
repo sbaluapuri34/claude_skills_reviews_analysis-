@@ -63,6 +63,14 @@ st.markdown("""
         border: 1px solid rgba(255, 255, 255, 0.1);
         margin-bottom: 10px;
     }
+
+    /* Pink Sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #E89CB1 !important; /* Muted vibrant pink */
+    }
+    [data-testid="stSidebar"] * {
+        color: white !important;
+    }
     </style>
     """, unsafe_allow_html=True)
 
